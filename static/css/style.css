@@ -1,0 +1,59 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: rgb(217, 237, 244);
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0px;
+    padding: 10px;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav > a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: darkblue;
+}
+
+main {
+    background-color: rgb(217, 237, 244);
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 0px;
+    height: auto;
+    width: 800px;
+}
+
+h2 {
+    font-size: 28px;
+    color: rgb(80, 45, 45);
+    padding: 10px;
+}
+
+footer {
+    background-color: darkblue;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer > p {
+    color: white;
+}
