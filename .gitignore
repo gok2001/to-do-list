@@ -24,3 +24,6 @@ Thumbs.db
 
 # Arquivos estáticos coletados
 /staticfiles/
+
+# Migrations
+tasks/migrations/
