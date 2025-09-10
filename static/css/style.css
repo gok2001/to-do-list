@@ -5,9 +5,10 @@
 }
 
 body {
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -42,10 +43,9 @@ main {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
-    margin: 20px auto;
-    padding: 10px 0px;
-    height: auto;
-    width: 800px;
+    margin: auto;
+    height: 500px;
+    width: 600px;
 }
 
 h2 {
@@ -59,7 +59,9 @@ footer {
     padding: 10px 0px;
     text-align: center;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0px;
 }
 
 footer > p {
