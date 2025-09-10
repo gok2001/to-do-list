@@ -4,6 +4,12 @@
     padding: 0px;
 }
 
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
 header {
     background-color: rgb(217, 237, 244);
     text-align: center;
