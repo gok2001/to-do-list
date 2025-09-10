@@ -33,7 +33,9 @@ nav > a:hover {
 
 main {
     background-color: rgb(217, 237, 244);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
     margin: 20px auto;
     padding: 10px 0px;
     height: auto;

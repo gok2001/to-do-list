@@ -5,4 +5,11 @@
 {% block content %}
     <h2>Welcome!</h2>
     <p>Here you'll see your tasks.</p>
+    <br>
+
+    <ul>
+        {% for task in tasks %}
+            <li class="tasks">{{ task.title }}</li>
+        {% endfor %}
+    </ul>
 {% endblock content %}
