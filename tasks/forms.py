@@ -18,3 +18,8 @@ class TaskForm(forms.ModelForm):
                 'rows': 4,
             }),
         }
+
+        def clean(self):
+            # cleaned_data = self.cleaned_data
+
+            return super().clean()

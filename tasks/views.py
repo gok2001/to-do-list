@@ -17,15 +17,20 @@ def add_task(request):
 
     if request.method == 'POST':
         form = forms.TaskForm(request.POST)
+        context = {
+            'form': form,
+            'form_action': form_action,
+        }
+
         if form.is_valid():
             form.save()
             return redirect('tasks:index')
-    else:
-        form = forms.TaskForm()
+    # else:
+    #     form = forms.TaskForm()
 
-        context = {
-            'form': form,
-            'form_action': form_action
+    context = {
+            'form': forms.TaskForm(),
+            'form_action': form_action,
         }
 
     return render(request, 'tasks/add_task.html', context)
