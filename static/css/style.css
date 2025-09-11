@@ -29,12 +29,12 @@ nav {
     padding: 10px;
 }
 
-nav > a {
+nav a {
     color: blueviolet;
     text-decoration: none;
 }
 
-nav > a:hover {
+nav a:hover {
     color: darkblue;
 }
 
@@ -52,6 +52,47 @@ h2 {
     font-size: 28px;
     color: rgb(80, 45, 45);
     padding: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+    padding: 1rem;
+    /* background-color: ; */
+    border-radius: 8px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: none;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.234);
+}
+
+form button {
+    width: 100px;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer {

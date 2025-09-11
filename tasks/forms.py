@@ -12,11 +12,9 @@ class TaskForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={
                 'placeholder': 'Name your task',
-                'class': 'form-title'
             }),
             'description': forms.Textarea(attrs={
                 'placeholder': 'Describe your task',
                 'rows': 4,
-                'class': 'form-description'
             }),
         }
