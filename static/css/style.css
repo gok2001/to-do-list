@@ -123,6 +123,15 @@ form button {
     color: #DAEEF5;
 }
 
+.page-link {
+    color: #306375;
+    text-decoration: none;
+}
+
+.page-link:hover {
+    color: #5C8EA0;
+}
+
 footer {
     background-color: #1C4B5C;
     padding: 10px 0px;
