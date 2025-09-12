@@ -67,7 +67,7 @@ def edit_task(request, task_id):
 
         if form.is_valid():
             form.save()
-            return redirect('tasks:index')
+            return redirect('tasks:show_task', task_id)
 
         return render(request, 'tasks/add_task.html', context)
 

@@ -7,6 +7,9 @@
     {% endif %}
     <p class="single-task-item">Completed: {{ single_task.completed }}</p>
     <p class="single-task-item">Created at: {{ single_task.created_at }}</p>
+    {% if single_task.updated_at %}
+        <p class="single-task-item">Updated at: {{ single_task.updated_at }}</p>
+    {% endif %}
 
     <a href="{% url "tasks:edit_task" single_task.id %}" class="edit-button">Edit</a>
 {% endblock content %}

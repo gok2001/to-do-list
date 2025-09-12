@@ -170,9 +170,6 @@ form button:hover {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    border-width: 2px;
-    border-style: outset;
-    border-image: initial;
     background-color: #123C4B;
     color: #96BCCA;
     cursor: pointer;
