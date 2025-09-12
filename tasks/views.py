@@ -14,8 +14,17 @@ def index(request):
     page_obj = paginator.get_page(page_number)
 
     context = {'page_obj': page_obj, 'site_title': 'Home - '}
-    
+
     return render(request, 'tasks/index.html', context)
+
+
+def show_task(request, task_id):
+    single_task = get_object_or_404(Task, pk=task_id)
+    site_title = f'Task {single_task.id} - '
+
+    context = {'single_task': single_task, 'site_title': site_title}
+
+    return render(request, 'tasks/task.html', context)
 
 
 def add_task(request):
@@ -33,22 +42,15 @@ def add_task(request):
             form.save()
             return redirect('tasks:index')
 
+        return render(request, 'tasks/add_task.html', context)
+
     context = {
-            'form': forms.TaskForm(),
-            'form_action': form_action,
-            'site_title': 'Add Task - '
-        }
+        'form': forms.TaskForm(),
+        'form_action': form_action,
+        'site_title': 'Add Task - '
+    }
 
     return render(request, 'tasks/add_task.html', context)
-
-
-def show_task(request, task_id):
-    single_task = get_object_or_404(Task, pk=task_id)
-    site_title = f'{single_task.title} - '
-
-    context = {'single_task': single_task, 'site_title': site_title}
-
-    return render(request, 'tasks/task.html', context)
 
 
 def edit_task(request, task_id):
@@ -67,9 +69,12 @@ def edit_task(request, task_id):
             form.save()
             return redirect('tasks:index')
 
+        return render(request, 'tasks/add_task.html', context)
+
     context = {
-            'form': forms.TaskForm(instance=task),
-            'form_action': form_action,
-        }
+        'form': forms.TaskForm(instance=task),
+        'form_action': form_action,
+        'site_title': 'Edit Task - '
+    }
 
     return render(request, 'tasks/add_task.html', context)

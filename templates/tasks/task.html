@@ -2,7 +2,11 @@
 
 {% block content %}
     <h3>{{ single_task.title }}</h3>
-    <p>{{ single_task.description }}</p>
-    <p>{{ single_task.completed }}</p>
-    <p>{{ single_task.created_at }}</p>
+    {% if single_task.description %}
+        <p class="single-task-item">Description: {{ single_task.description }}</p>
+    {% endif %}
+    <p class="single-task-item">Completed: {{ single_task.completed }}</p>
+    <p class="single-task-item">Created at: {{ single_task.created_at }}</p>
+
+    <a href="{% url "tasks:edit_task" single_task.id %}" class="edit-button">Edit</a>
 {% endblock content %}
