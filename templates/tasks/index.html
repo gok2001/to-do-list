@@ -1,7 +1,5 @@
 {% extends "tasks/base.html" %}
 
-{% block title %}Home - To-do List{% endblock title %}
-
 {% block content %}
     <h2>To-do</h2>
 
@@ -10,7 +8,7 @@
             {% for task in page_obj %}
             <li class="task-list-item">
                 <input type="checkbox" name="checkbox" id="checkbox">
-                <a class="task-link" href="#"><strong>{{ task.title }}</strong></a>
+                <a class="task-link" href="{% url "tasks:show_task" task.id %}"><strong>{{ task.title }}</strong></a>
             </li>
             {% endfor %}
         {% else %}
