@@ -39,14 +39,15 @@ nav {
 .menu-link {
     color: #123C4B;
     text-decoration: none;
+    margin: 10px;
 }
 
 .menu-link:hover {
-    color: #96BCCA;
+    color: #DAEEF5;
 }
 
 main {
-    background-color: #d9edf4;
+    background-color: #96BCCA;
     display: flex;
     align-items: center;
     flex-flow: column wrap;
@@ -59,8 +60,9 @@ main {
 
 h2 {
     font-size: 28px;
-    color: rgb(80, 45, 45);
+    color: #123C4B;
     padding: 10px;
+    margin: 10px;
 }
 
 form {
@@ -104,13 +106,21 @@ form button {
     cursor: pointer;
 }
 
+.task-list-item {
+    margin: 5px;
+    line-height: 1.0;
+    display: flex;
+    align-items: center;
+}
+
 .task-link {
     color: #123C4B;
     text-decoration: none;
+    padding: 10px;
 }
 
 .task-link:hover {
-    color: #96BCCA;
+    color: #DAEEF5;
 }
 
 footer {

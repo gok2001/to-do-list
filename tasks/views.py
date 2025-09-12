@@ -6,7 +6,7 @@ from .models import Task
 
 
 def index(request):
-    task_list = Task.objects.all()
+    task_list = Task.objects.all().order_by('-created_at')
     context = {'tasks': task_list}
     
     return render(request, 'tasks/index.html', context)
@@ -25,8 +25,6 @@ def add_task(request):
         if form.is_valid():
             form.save()
             return redirect('tasks:index')
-    # else:
-    #     form = forms.TaskForm()
 
     context = {
             'form': forms.TaskForm(),

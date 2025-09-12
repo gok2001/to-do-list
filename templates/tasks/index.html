@@ -3,13 +3,18 @@
 {% block title %}Home - To-do List{% endblock title %}
 
 {% block content %}
-    <h2>Welcome!</h2>
-    <p>Here you'll see your tasks.</p>
-    <br>
+    <h2>To-do</h2>
 
     <ul>
-        {% for task in tasks %}
-            <li><input type="checkbox" name="checkbox" id="checkbox"><a class="task-link" href="#">{{ task.title }}</a></li>
-        {% endfor %}
+        {% if tasks %}
+            {% for task in tasks %}
+            <li class="task-list-item">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <a class="task-link" href="#"><strong>{{ task.title }}</strong></a>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li>No tasks to do yet.</li>
+        {% endif %}
     </ul>
 {% endblock content %}
