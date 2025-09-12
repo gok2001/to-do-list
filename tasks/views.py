@@ -80,3 +80,15 @@ def edit_task(request, task_id):
     }
 
     return render(request, 'tasks/add_task.html', context)
+
+
+def completed_tasks(request):
+    task_list = Task.objects.filter(completed=True).order_by('-updated_at')
+
+    paginator = Paginator(task_list, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {'page_obj': page_obj, 'site_title': 'Completed Tasks - '}
+
+    return render(request, 'tasks/completed_tasks.html', context)

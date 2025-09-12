@@ -1,0 +1,18 @@
+{% extends "tasks/base.html" %}
+
+{% block content %}
+    <div class="main-content">
+        <h2>Completed</h2>
+        <ul>
+            {% if page_obj %}
+                {% for task in page_obj %}
+                <li class="task-list-item">
+                    <a class="task-link" href="{% url "tasks:show_task" task.id %}"><strong>{{ task.title }}</strong></a>
+                </li>
+                {% endfor %}
+            {% else %}
+                <li class="task-list-item">No tasks completed yet.</li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock content %}
