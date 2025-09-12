@@ -6,15 +6,15 @@
     <h2>To-do</h2>
 
     <ul>
-        {% if tasks %}
-            {% for task in tasks %}
+        {% if page_obj %}
+            {% for task in page_obj %}
             <li class="task-list-item">
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <a class="task-link" href="#"><strong>{{ task.title }}</strong></a>
             </li>
             {% endfor %}
         {% else %}
-            <li>No tasks to do yet.</li>
+            <li class="task-list-item">No tasks to do yet.</li>
         {% endif %}
     </ul>
 {% endblock content %}
