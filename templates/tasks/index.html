@@ -7,8 +7,14 @@
             {% if page_obj %}
                 {% for task in page_obj %}
                 <li class="task-list-item">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <a class="task-link" href="{% url "tasks:show_task" task.id %}"><strong>{{ task.title }}</strong></a>
+                    <form action="{% url "tasks:complete_task" task.id %}" method="POST">
+                        {% csrf_token %}
+
+                        <input type="checkbox" onchange="this.form.submit()">
+                    </form>
+                    <a class="task-link" href="{% url "tasks:show_task" task.id %}">
+                        <strong>{{ task.title }}</strong>
+                    </a>
                 </li>
                 {% endfor %}
             {% else %}

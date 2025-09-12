@@ -7,7 +7,7 @@ from .models import Task
 
 
 def index(request):
-    task_list = Task.objects.all().order_by('-created_at')
+    task_list = Task.objects.filter(completed=False).order_by('-created_at')
 
     paginator = Paginator(task_list, 10)
     page_number = request.GET.get('page')
@@ -92,3 +92,12 @@ def completed_tasks(request):
     context = {'page_obj': page_obj, 'site_title': 'Completed Tasks - '}
 
     return render(request, 'tasks/completed_tasks.html', context)
+
+
+def complete_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    
+    task.completed = True
+    task.save()
+
+    return redirect('tasks:index')

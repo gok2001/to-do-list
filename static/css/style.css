@@ -83,7 +83,7 @@ h3 {
     margin: 10px;
 }
 
-form {
+.add-task {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -95,12 +95,12 @@ form {
     border-radius: 8px;
 }
 
-form label {
+.add-task label {
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
 
-form input, form textarea {
+.add-task input, form textarea {
     width: 100%;
     padding: 0.6rem;
     border: 1px solid;
@@ -108,16 +108,16 @@ form input, form textarea {
     font-size: 1rem;
 }
 
-form textarea {
+.add-task textarea {
     resize: none;
 }
 
-form input:focus, form textarea:focus {
+.add-task input:focus, form textarea:focus {
     outline: none;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.234);
 }
 
-form button {
+.add-task button {
     width: 150px;
     font-size: 16px;
     padding: 0.8rem;
@@ -127,7 +127,7 @@ form button {
     color: #96BCCA;
 }
 
-form button:hover {
+.add-task button:hover {
     background-color: #5C8EA0;
     color: #123C4B;
 }

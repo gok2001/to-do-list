@@ -1,7 +1,7 @@
 {% extends "tasks/base.html" %}
 
 {% block content %}
-    <form action="{{ form_action }}" method="POST">
+    <form class="add-task" action="{{ form_action }}" method="POST">
         {% csrf_token %}
 
         {% for field in form %}
