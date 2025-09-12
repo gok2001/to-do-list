@@ -9,7 +9,7 @@
 
     <ul>
         {% for task in tasks %}
-            <li class="tasks">{{ task.title }}</li>
+            <li><input type="checkbox" name="checkbox" id="checkbox"><a class="task-link" href="#">{{ task.title }}</a></li>
         {% endfor %}
     </ul>
 {% endblock content %}
