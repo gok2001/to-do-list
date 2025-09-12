@@ -118,7 +118,7 @@ form input:focus, form textarea:focus {
 }
 
 form button {
-    width: 100px;
+    width: 150px;
     font-size: 16px;
     padding: 0.8rem;
     border-radius: 5px;

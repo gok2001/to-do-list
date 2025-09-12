@@ -47,7 +47,8 @@ def add_task(request):
     context = {
         'form': forms.TaskForm(),
         'form_action': form_action,
-        'site_title': 'Add Task - '
+        'site_title': 'Add Task - ',
+        'is_edit': False
     }
 
     return render(request, 'tasks/add_task.html', context)
@@ -74,7 +75,8 @@ def edit_task(request, task_id):
     context = {
         'form': forms.TaskForm(instance=task),
         'form_action': form_action,
-        'site_title': 'Edit Task - '
+        'site_title': 'Edit Task - ',
+        'is_edit': True
     }
 
     return render(request, 'tasks/add_task.html', context)

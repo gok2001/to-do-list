@@ -9,6 +9,10 @@
             {{ field }}
         {% endfor %}
         
-        <button type="submit">Add</button>
+        {% if is_edit %}
+            <button type="submit">Edit Task</button>
+        {% else %}
+            <button type="submit">Add Task</button>
+        {% endif %}
     </form>
 {% endblock content %}
