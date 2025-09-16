@@ -82,6 +82,22 @@ def edit_task(request, task_id):
     return render(request, 'tasks/add_task.html', context)
 
 
+def complete_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+
+    task.completed = True
+    task.save()
+
+    return redirect('tasks:index')
+
+
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    task.delete()
+
+    return redirect('tasks:index')
+
+
 def completed_tasks(request):
     task_list = Task.objects.filter(completed=True).order_by('-updated_at')
 
@@ -92,12 +108,3 @@ def completed_tasks(request):
     context = {'page_obj': page_obj, 'site_title': 'Completed Tasks - '}
 
     return render(request, 'tasks/completed_tasks.html', context)
-
-
-def complete_task(request, task_id):
-    task = get_object_or_404(Task, pk=task_id)
-    
-    task.completed = True
-    task.save()
-
-    return redirect('tasks:index')
