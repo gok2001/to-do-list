@@ -1,7 +1,7 @@
 {% extends "tasks/base.html" %}
 
 {% block content %}
-    <form class="add-task" action="{{ form_action }}" method="POST">
+    <form class="task" action="{{ form_action }}" method="POST">
         {% csrf_token %}
 
         {% for field in form %}
@@ -10,9 +10,9 @@
         {% endfor %}
         
         {% if is_edit %}
-            <button type="submit">Edit Task</button>
+            <button class="btn" type="submit">Edit Task</button>
         {% else %}
-            <button type="submit">Add Task</button>
+            <button class="btn" type="submit">Add Task</button>
         {% endif %}
     </form>
 {% endblock content %}

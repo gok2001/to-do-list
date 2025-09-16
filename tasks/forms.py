@@ -3,9 +3,6 @@ from . import models
 
 
 class TaskForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     class Meta:
         model = models.Task
         fields = ('title', 'description',)
@@ -20,6 +17,4 @@ class TaskForm(forms.ModelForm):
         }
 
         def clean(self):
-            # cleaned_data = self.cleaned_data
-
             return super().clean()

@@ -83,7 +83,7 @@ h3 {
     margin: 10px;
 }
 
-.add-task {
+.task {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -95,12 +95,12 @@ h3 {
     border-radius: 8px;
 }
 
-.add-task label {
+.task label {
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
 
-.add-task input, form textarea {
+.task input, form textarea {
     width: 100%;
     padding: 0.6rem;
     border: 1px solid;
@@ -108,28 +108,13 @@ h3 {
     font-size: 1rem;
 }
 
-.add-task textarea {
+.task textarea {
     resize: none;
 }
 
-.add-task input:focus, form textarea:focus {
+.task input:focus, form textarea:focus {
     outline: none;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.234);
-}
-
-.add-task button {
-    width: 150px;
-    font-size: 16px;
-    padding: 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #123C4B;
-    color: #96BCCA;
-}
-
-.add-task button:hover {
-    background-color: #5C8EA0;
-    color: #123C4B;
 }
 
 .task-list-item {
@@ -162,7 +147,13 @@ h3 {
     padding: 10px;
 }
 
-.edit-button {
+.btns {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
     text-align: center;
     text-decoration: none;
     width: 100px;
@@ -175,9 +166,19 @@ h3 {
     cursor: pointer;
 }
 
-.edit-button:hover {
-    background-color: #5C8EA0;
+.btn:hover {
+    background-color: #96BCCA;
     color: #123C4B;
+}
+
+.btn-danger {
+    border: none;
+    background-color: tomato;
+}
+
+.btn-danger:hover {
+    background-color: rgb(141, 34, 15);
+    color: #96BCCA;
 }
 
 footer {
